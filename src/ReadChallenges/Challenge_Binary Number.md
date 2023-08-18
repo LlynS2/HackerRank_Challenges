@@ -7,7 +7,8 @@ Given a reference to the head of a singly-linked list, convert the binary number
 
 Example
 
-![](Images/Image 1.png)
+![Image 1](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/98160e37-c9e2-433b-ab6c-b65b0893c88f)
+
 
 Linked list corresponding to the binary number (010011)[2] or (19)[10].
 
@@ -40,7 +41,7 @@ STDIN    Function
 Sample Output
 26
 
-![](Images/Image 2.png)
+![Image 2](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/38005a23-0910-476e-bff1-bf0ca951a134)
 
 Explanation
 
@@ -65,7 +66,7 @@ size n = 10 0     →  binary LinkedListNode.data = [0, 0, 0, 0, 0, 1, 1, 1, 1, 
 Sample Output
 31
 
-![](Images/Image 3.png)
+![Image 3](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/dd776dc0-6b0d-4cff-b9df-b11d1e0abb6b)
 
 Explanation
 
