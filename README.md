@@ -55,7 +55,7 @@
 🔵 𝐄𝐗𝐀𝐌𝐏𝐋𝐄
 
 <div align="center" >
-  <img height="100px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/98160e37-c9e2-433b-ab6c-b65b0893c88f"><br>
+  <img height="100px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/023d907d-1ebd-4402-8bb5-85e88c005b98"><br>
   <p>𝙻𝚒𝚗𝚔𝚎𝚍 𝚕𝚒𝚜𝚝 𝚌𝚘𝚛𝚛𝚎𝚜𝚙𝚘𝚗𝚍𝚒𝚗𝚐 𝚝𝚘 𝚝𝚑𝚎 𝚋𝚒𝚗𝚊𝚛𝚢 𝚗𝚞𝚖𝚋𝚎𝚛 (𝟶𝟷𝟶𝟶𝟷𝟷)[𝟸] 𝚘𝚛 (𝟷𝟿)[𝟷𝟶].</p>
 </div><br>
 
