@@ -1,149 +1,84 @@
-<div>
- 1. Array Subsets
+<div align="right" >
+  <p>
+  ꜥꜤ  实践中的挑战 ❛.⌇ <br>____________________
+  </p>
+</div> 
 
-Given an integer array, divide the array into 2 subsets A and B while respecting the following conditions :
-The intersection of A and B is null.
-The union A and B is equal to the original array.
-The number of elements in subset A is minimal.
-The sum of A's elements is greater than the sum of B's elements.
-Return the subset A in increasing order where the sum of A's elements is greater than the sum of B's elements.
-If more than one subset exists, return the one with the maximal sum.
+<div align="center" >
+  <img height="180px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/5d898f1c-f018-4129-bc37-c3b209a33276"><br><br>
+</div><br>
 
-Example
+<div align="left">
+    ˚✧┊ 𝟙. 𝔸𝕣𝕣𝕒𝕪 𝕊𝕦𝕓𝕤𝕖𝕥𝕤 ·˚ ༘ ˎˊ˗<br>
+ <p><br>
+  𝙶𝚒𝚟𝚎𝚗 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛 𝚊𝚛𝚛𝚊𝚢, 𝚍𝚒𝚟𝚒𝚍𝚎 𝚝𝚑𝚎 𝚊𝚛𝚛𝚊𝚢 𝚒𝚗𝚝𝚘 𝟸 𝚜𝚞𝚋𝚜𝚎𝚝𝚜 𝙰 𝚊𝚗𝚍 𝙱 𝚠𝚑𝚒𝚕𝚎 𝚛𝚎𝚜𝚙𝚎𝚌𝚝𝚒𝚗𝚐 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚌𝚘𝚗𝚍𝚒𝚝𝚒𝚘𝚗𝚜 :<br><br>      
+   👉 𝚃𝚑𝚎 𝚒𝚗𝚝𝚎𝚛𝚜𝚎𝚌𝚝𝚒𝚘𝚗 𝚘𝚏 𝙰 𝚊𝚗𝚍 𝙱 𝚒𝚜 𝚗𝚞𝚕𝚕.<br>  
+   👉 𝚃𝚑𝚎 𝚞𝚗𝚒𝚘𝚗 𝙰 𝚊𝚗𝚍 𝙱 𝚒𝚜 𝚎𝚚𝚞𝚊𝚕 𝚝𝚘 𝚝𝚑𝚎 𝚘𝚛𝚒𝚐𝚒𝚗𝚊𝚕 𝚊𝚛𝚛𝚊𝚢.<br>    
+   👉 𝚃𝚑𝚎 𝚗𝚞𝚖𝚋𝚎𝚛 𝚘𝚏 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜 𝚒𝚗 𝚜𝚞𝚋𝚜𝚎𝚝 𝙰 𝚒𝚜 𝚖𝚒𝚗𝚒𝚖𝚊𝚕.<br>    
+   👉 𝚃𝚑𝚎 𝚜𝚞𝚖 𝚘𝚏 𝙰'𝚜 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜 𝚒𝚜 𝚐𝚛𝚎𝚊𝚝𝚎𝚛 𝚝𝚑𝚊𝚗 𝚝𝚑𝚎 𝚜𝚞𝚖 𝚘𝚏 𝙱'𝚜 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜.<br>    
+   👉 𝚁𝚎𝚝𝚞𝚛𝚗 𝚝𝚑𝚎 𝚜𝚞𝚋𝚜𝚎𝚝 𝙰 𝚒𝚗 𝚒𝚗𝚌𝚛𝚎𝚊𝚜𝚒𝚗𝚐 𝚘𝚛𝚍𝚎𝚛 𝚠𝚑𝚎𝚛𝚎 𝚝𝚑𝚎 𝚜𝚞𝚖 𝚘𝚏 𝙰'𝚜 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜 𝚒𝚜 𝚐𝚛𝚎𝚊𝚝𝚎𝚛 𝚝𝚑𝚊𝚗 𝚝𝚑𝚎 𝚜𝚞𝚖 𝚘𝚏 𝙱'𝚜 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜.<br>    
+   👉 𝙸𝚏 𝚖𝚘𝚛𝚎 𝚝𝚑𝚊𝚗 𝚘𝚗𝚎 𝚜𝚞𝚋𝚜𝚎𝚝 𝚎𝚡𝚒𝚜𝚝𝚜, 𝚛𝚎𝚝𝚞𝚛𝚗 𝚝𝚑𝚎 𝚘𝚗𝚎 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝚖𝚊𝚡𝚒𝚖𝚊𝚕 𝚜𝚞𝚖.<br>  
 
-n = 5 arr = [3, 7, 5, 6, 2]
-The 2 subsets in arr that satisfy the conditions for A are [5, 7] and [6, 7] : A is minimal (size 2)
-Sum(A) = (5 + 7) = 12 > Sum(B) = (2 + 3 + 6) = 11 Sum(A) = (6 + 7) = 13 > Sum(B) = (2 + 3 + 5) = 10
-The intersection of A and B is null and their union is equal to arr.
-The subset A where the sum of its elements is maximal is [6, 7].
+ 🔵 𝐄𝐗𝐀𝐌𝐏𝐋𝐄
 
-Function Description
+  𝚗 = 𝟻 𝚊𝚛𝚛 = [𝟹, 𝟽, 𝟻, 𝟼, 𝟸]<br><br>
+  𝚃𝚑𝚎 𝟸 𝚜𝚞𝚋𝚜𝚎𝚝𝚜 𝚒𝚗 𝚊𝚛𝚛 𝚝𝚑𝚊𝚝 𝚜𝚊𝚝𝚒𝚜𝚏𝚢 𝚝𝚑𝚎 𝚌𝚘𝚗𝚍𝚒𝚝𝚒𝚘𝚗𝚜 𝚏𝚘𝚛 𝙰 𝚊𝚛𝚎 [𝟻, 𝟽] 𝚊𝚗𝚍 [𝟼, 𝟽] :<br> 
+  𝙰 𝚒𝚜 𝚖𝚒𝚗𝚒𝚖𝚊𝚕 (𝚜𝚒𝚣𝚎 𝟸)𝚂𝚞𝚖(𝙰) = (𝟻 + 𝟽) = 𝟷𝟸 > 𝚂𝚞𝚖(𝙱) = (𝟸 + 𝟹 + 𝟼) = 𝟷𝟷 𝚂𝚞𝚖(𝙰) = (𝟼 + 𝟽) = 𝟷𝟹 > 𝚂𝚞𝚖(𝙱) = (𝟸 + 𝟹 + 𝟻) = 𝟷𝟶<br> 
+  𝚃𝚑𝚎 𝚒𝚗𝚝𝚎𝚛𝚜𝚎𝚌𝚝𝚒𝚘𝚗 𝚘𝚏 𝙰 𝚊𝚗𝚍 𝙱 𝚒𝚜 𝚗𝚞𝚕𝚕 𝚊𝚗𝚍 𝚝𝚑𝚎𝚒𝚛 𝚞𝚗𝚒𝚘𝚗 𝚒𝚜 𝚎𝚚𝚞𝚊𝚕 𝚝𝚘 𝚊𝚛𝚛.<br> 
+  𝚃𝚑𝚎 𝚜𝚞𝚋𝚜𝚎𝚝 𝙰 𝚠𝚑𝚎𝚛𝚎 𝚝𝚑𝚎 𝚜𝚞𝚖 𝚘𝚏 𝚒𝚝𝚜 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜 𝚒𝚜 𝚖𝚊𝚡𝚒𝚖𝚊𝚕 𝚒𝚜 [𝟼, 𝟽].<br> 
 
-Complete the subsetA function in the editor below.
-subsetA has the following parameter(s):
-int arr[]: an integer array Returns:
-int[] : an integer array with the values of subset A.
-Constraints 1 ≤ n ≤ 105  1 ≤ arr[i] ≤ 105 (where 0 ≤ i < n)
-Input Format For Custom Testing The first line contains an integer, n, denoting the number of elements in the array.
-Each line i of the n subsequent lines contains an integer, which is an element of arr.
+ ✌𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧
 
-Sample Case 0 Sample
+ 𝙲𝚘𝚖𝚙𝚕𝚎𝚝𝚎 𝚝𝚑𝚎 𝚜𝚞𝚋𝚜𝚎𝚝𝙰 𝚏𝚞𝚗𝚌𝚝𝚒𝚘𝚗 𝚒𝚗 𝚝𝚑𝚎 𝚎𝚍𝚒𝚝𝚘𝚛 𝚋𝚎𝚕𝚘𝚠.<br>
 
-Input For Custom Testing
+ 𝚜𝚞𝚋𝚜𝚎𝚝𝙰 𝚑𝚊𝚜 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚙𝚊𝚛𝚊𝚖𝚎𝚝𝚎𝚛(𝚜):𝚒𝚗𝚝 𝚊𝚛𝚛[]: 
+ 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛 𝚊𝚛𝚛𝚊𝚢 𝚁𝚎𝚝𝚞𝚛𝚗𝚜:𝚒𝚗𝚝[] : 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛 𝚊𝚛𝚛𝚊𝚢 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝚟𝚊𝚕𝚞𝚎𝚜 𝚘𝚏 𝚜𝚞𝚋𝚜𝚎𝚝 𝙰.
+ 𝙲𝚘𝚗𝚜𝚝𝚛𝚊𝚒𝚗𝚝𝚜 𝟷 ≤ 𝚗 ≤ 𝟷𝟶𝟻  𝟷 ≤ 𝚊𝚛𝚛[𝚒] ≤ 𝟷𝟶𝟻 (𝚠𝚑𝚎𝚛𝚎 𝟶 ≤ 𝚒 < 𝚗)
 
-STDIN Function
------ --------
-6     →   arr[] size n = 6
-5     →   arr[] = [5, 3, 2, 4, 1, 2]
-3 2 4 1 2
-Sample Output
-4
-5
+ 𝐈𝐧𝐩𝐮𝐭 𝐅𝐨𝐫𝐦𝐚𝐭 𝐅𝐨𝐫 𝐂𝐮𝐬𝐭𝐨𝐦 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 ✍ 
 
-Explanation
+ 𝚃𝚑𝚎 𝚏𝚒𝚛𝚜𝚝 𝚕𝚒𝚗𝚎 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛, 𝚗, 𝚍𝚎𝚗𝚘𝚝𝚒𝚗𝚐 𝚝𝚑𝚎 𝚗𝚞𝚖𝚋𝚎𝚛 𝚘𝚏 𝚎𝚕𝚎𝚖𝚎𝚗𝚝𝚜 𝚒𝚗 𝚝𝚑𝚎 𝚊𝚛𝚛𝚊𝚢.𝙴𝚊𝚌𝚑 𝚕𝚒𝚗𝚎 𝚒 𝚘𝚏 𝚝𝚑𝚎 𝚗 𝚜𝚞𝚋𝚜𝚎𝚚𝚞𝚎𝚗𝚝 𝚕𝚒𝚗𝚎𝚜 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚊𝚗  
+ 𝚒𝚗𝚝𝚎𝚐𝚎𝚛, 𝚠𝚑𝚒𝚌𝚑 𝚒𝚜 𝚊𝚗 𝚎𝚕𝚎𝚖𝚎𝚗𝚝 𝚘𝚏 𝚊𝚛𝚛.
+</p>
+ </div><br>
+ 
+ ---------
+ <br>
+ 
+<div align="left">
+    ˚✧┊ 𝟚. 𝔹𝕚𝕟𝕒𝕣𝕪 ℕ𝕦𝕞𝕓𝕖𝕣 𝕚𝕟 𝕒 𝕃𝕚𝕟𝕜𝕖𝕕 𝕃𝕚𝕤𝕥 ·˚ ༘ ˎˊ˗<br>
+<p><br>
+ 𝙰 𝚋𝚒𝚗𝚊𝚛𝚢 𝚗𝚞𝚖𝚋𝚎𝚛 𝚒𝚜 𝚛𝚎𝚙𝚛𝚎𝚜𝚎𝚗𝚝𝚎𝚍 𝚊𝚜 𝚊 𝚜𝚎𝚛𝚒𝚎𝚜 𝚘𝚏 𝟶'𝚜 𝚊𝚗𝚍 𝟷'𝚜. 𝙸𝚗 𝚝𝚑𝚒𝚜 𝚌𝚑𝚊𝚕𝚕𝚎𝚗𝚐𝚎, 𝚝𝚑𝚎 𝚜𝚎𝚛𝚒𝚎𝚜 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚒𝚗 𝚝𝚑𝚎 𝚏𝚘𝚛𝚖 𝚘𝚏 𝚊 𝚜𝚒𝚗𝚐𝚕𝚢-𝚕𝚒𝚗𝚔𝚎𝚍 𝚕𝚒𝚜𝚝.
+ 𝙴𝚊𝚌𝚑 𝚗𝚘𝚍𝚎 𝚒𝚗𝚜𝚝𝚊𝚗𝚌𝚎, 𝚊 𝙻𝚒𝚗𝚔𝚎𝚍𝙻𝚒𝚜𝚝𝙽𝚘𝚍𝚎, 𝚑𝚊𝚜 𝚊 𝚟𝚊𝚕𝚞𝚎, 𝚍𝚊𝚝𝚊, 𝚊𝚗𝚍 𝚊 𝚙𝚘𝚒𝚗𝚝𝚎𝚛 𝚝𝚘 𝚝𝚑𝚎 𝚗𝚎𝚡𝚝 𝚗𝚘𝚍𝚎, 𝚗𝚎𝚡𝚝. 𝙶𝚒𝚟𝚎𝚗 𝚊 𝚛𝚎𝚏𝚎𝚛𝚎𝚗𝚌𝚎 𝚝𝚘 𝚝𝚑𝚎 𝚑𝚎𝚊𝚍 𝚘𝚏 𝚊 𝚜𝚒𝚗𝚐𝚕𝚢
+ 𝚕𝚒𝚗𝚔𝚎𝚍 𝚕𝚒𝚜𝚝, 𝚌𝚘𝚗𝚟𝚎𝚛𝚝 𝚝𝚑𝚎 𝚋𝚒𝚗𝚊𝚛𝚢 𝚗𝚞𝚖𝚋𝚎𝚛 𝚛𝚎𝚙𝚛𝚎𝚜𝚎𝚗𝚝𝚎𝚍 𝚝𝚘 𝚊 𝚍𝚎𝚌𝚒𝚖𝚊𝚕 𝚗𝚞𝚖𝚋𝚎𝚛.
 
-n = 6 arr = [5, 3, 2, 4, 1, 2]
-The subset of A that satisfies the conditions is [4, 5] : A is minimal (size 2)
-Sum(A) = (4 + 5)= 9 > Sum(B) = (1 + 2 + 2 +  3) = 8
-The intersection of A and B is null and their union is equal to arr.
-The subset A with the maximal sum is [4, 5].
+🔵 𝐄𝐗𝐀𝐌𝐏𝐋𝐄
 
-Sample Case 1 Sample
+<div align="center" >
+  <img height="100px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/98160e37-c9e2-433b-ab6c-b65b0893c88f"><br>
+  <p>𝙻𝚒𝚗𝚔𝚎𝚍 𝚕𝚒𝚜𝚝 𝚌𝚘𝚛𝚛𝚎𝚜𝚙𝚘𝚗𝚍𝚒𝚗𝚐 𝚝𝚘 𝚝𝚑𝚎 𝚋𝚒𝚗𝚊𝚛𝚢 𝚗𝚞𝚖𝚋𝚎𝚛 (𝟶𝟷𝟶𝟶𝟷𝟷)[𝟸] 𝚘𝚛 (𝟷𝟿)[𝟷𝟶].</p>
+</div><br>
 
-Input For Custom Testing
+ ✌𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧
 
-STDIN     Function
------     --------
-5    →   arr[] size n = 5
-4    →   arr[] = [4, 2, 5, 1, 6]
-2 5 1 6
-Sample Output
-5
-6
+𝙲𝚘𝚖𝚙𝚕𝚎𝚝𝚎 𝚝𝚑𝚎 𝚏𝚞𝚗𝚌𝚝𝚒𝚘𝚗 𝚐𝚎𝚝𝙽𝚞𝚖𝚋𝚎𝚛 𝚒𝚗 𝚝𝚑𝚎 𝚎𝚍𝚒𝚝𝚘𝚛 𝚋𝚎𝚕𝚘𝚠.  
 
-Explanation
+👉 𝚐𝚎𝚝𝙽𝚞𝚖𝚋𝚎𝚛 𝚑𝚊𝚜 𝚝𝚑𝚎 𝚏𝚘𝚕𝚕𝚘𝚠𝚒𝚗𝚐 𝚙𝚊𝚛𝚊𝚖𝚎𝚝𝚎𝚛(𝚜):<br> 
+𝚋𝚒𝚗𝚊𝚛𝚢:  𝚛𝚎𝚏𝚎𝚛𝚎𝚗𝚌𝚎 𝚝𝚘 𝚝𝚑𝚎 𝚑𝚎𝚊𝚍 𝚘𝚏 𝚊 𝚜𝚒𝚗𝚐𝚕𝚢-𝚕𝚒𝚗𝚔𝚎𝚍 𝚕𝚒𝚜𝚝 𝚘𝚏 𝚋𝚒𝚗𝚊𝚛𝚢 𝚍𝚒𝚐𝚒𝚝𝚜  
 
-n = 5 arr = [4, 2, 5, 1, 6]
-The subset of A that satisfies the conditions is [5, 6]: A is minimal (size 2)
-Sum(A) = (5 + 6) = 11 > Sum(B) = (1 + 2 + 4) = 7 Sum(A) = (4 + 6) = 10 > Sum(B) = (1 + 2 + 5) = 8
-The intersection of A and B is null and their union is equal to arr.
-The subset A with the maximal sum is [5, 6].
+👉 𝚁𝚎𝚝𝚞𝚛𝚗𝚜:<br> 
+𝚒𝚗𝚝: 𝚊 (𝚕𝚘𝚗𝚐 𝚒𝚗𝚝𝚎𝚐𝚎𝚛)[𝟷𝟶] 𝚛𝚎𝚙𝚛𝚎𝚜𝚎𝚗𝚝𝚊𝚝𝚒𝚘𝚗 𝚘𝚏 𝚝𝚑𝚎 𝚋𝚒𝚗𝚊𝚛𝚢 𝚗𝚞𝚖𝚋𝚎𝚛 𝙲𝚘𝚗𝚜𝚝𝚛𝚊𝚒𝚗𝚝𝚜 𝟷 ≤ 𝚗 ≤ 𝟼𝟺 𝙰𝚕𝚕 𝙻𝚒𝚗𝚔𝚎𝚍𝙻𝚒𝚜𝚝𝙽𝚘𝚍𝚎.𝚍𝚊𝚝𝚊 ∈ {𝟶𝟷} 𝚃𝚑𝚎 𝚍𝚎𝚜𝚌𝚛𝚒𝚋𝚎𝚍 (𝚒𝚗𝚝𝚎𝚐𝚎𝚛)[𝟸] < 𝟸𝟼𝟺
+
+ 𝐈𝐧𝐩𝐮𝐭 𝐅𝐨𝐫𝐦𝐚𝐭 𝐅𝐨𝐫 𝐂𝐮𝐬𝐭𝐨𝐦 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 ✍ 
+
+𝙸𝚗𝚙𝚞𝚝 𝚏𝚛𝚘𝚖 𝚜𝚝𝚍𝚒𝚗 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚙𝚛𝚘𝚌𝚎𝚜𝚜𝚎𝚍 𝚊𝚜 𝚏𝚘𝚕𝚕𝚘𝚠𝚜 𝚊𝚗𝚍 𝚙𝚊𝚜𝚜𝚎𝚍 𝚝𝚘 𝚝𝚑𝚎 𝚏𝚞𝚗𝚌𝚝𝚒𝚘𝚗. 𝚃𝚑𝚎 𝚏𝚒𝚛𝚜𝚝 𝚕𝚒𝚗𝚎 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛 𝚗, 𝚝𝚑𝚎 𝚜𝚒𝚣𝚎 𝚘𝚏 𝚝𝚑𝚎 𝚕𝚒𝚗𝚔𝚎𝚍 
+𝚕𝚒𝚜𝚝 𝚋𝚒𝚗𝚊𝚛𝚢. 
+𝙴𝚊𝚌𝚑 𝚘𝚏 𝚝𝚑𝚎 𝚗𝚎𝚡𝚝 𝚗 𝚕𝚒𝚗𝚎𝚜 𝚌𝚘𝚗𝚝𝚊𝚒𝚗𝚜 𝚊𝚗 𝚒𝚗𝚝𝚎𝚐𝚎𝚛 𝙻𝚒𝚗𝚔𝚎𝚍𝙻𝚒𝚜𝚝𝙽𝚘𝚍𝚎.𝚍𝚊𝚝𝚊[𝚒] 𝚠𝚑𝚎𝚛𝚎 𝟶 ≤ 𝚒 < 𝚗.
+ </p>
 </div>
 
 <div>
- 2. Binary Number in a Linked List
-
-A binary number is represented as a series of 0's and 1's.
-In this challenge, the series will be in the form of a singly-linked list.
-Each node instance, a LinkedListNode, has a value, data, and a pointer to the next node, next.
-Given a reference to the head of a singly-linked list, convert the binary number represented to a decimal number.
-
-Example
-
-![Image 1](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/98160e37-c9e2-433b-ab6c-b65b0893c88f)
-
-
-Linked list corresponding to the binary number (010011)[2] or (19)[10].
-
-Function Description
-
-Complete the function getNumber in the editor below.
-getNumber has the following parameter(s):
-binary:  reference to the head of a singly-linked list of binary digits
-Returns:
-int: a (long integer)[10] representation of the binary number
-Constraints 1 ≤ n ≤ 64 All LinkedListNode.data ∈ {01} The described (integer)[2] < 264
-
-Input Format for Custom Testing
-
-Input from stdin will be processed as follows and passed to the function.
-The first line contains an integer n, the size of the linked list binary.
-Each of the next n lines contains an integer LinkedListNode.data[i] where 0 ≤ i < n.
-
-Sample Case 0 Sample Input
-
-STDIN    Function
------    -----
-7 →  binary[] size n = 7 0 →  binary LinkedListNode.data = [0, 0, 1, 1, 0, 1, 0] 0
-1
-1
-0
-1
-0
-
-Sample Output
-26
-
-![Image 2](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/38005a23-0910-476e-bff1-bf0ca951a134)
-
-Explanation
-
-The linked list is given as input.
-The linked list forms the binary number 0011010 → (0011010)[2] = (26)[10]
-
-Sample Case 1 Sample Input
-
-STDIN    Function
------    -----
-10 →  binary[]
-size n = 10 0     →  binary LinkedListNode.data = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 0
-0
-0
-0
-1
-1
-1
-1
-1
-
-Sample Output
-31
-
-![Image 3](https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/dd776dc0-6b0d-4cff-b9df-b11d1e0abb6b)
-
-Explanation
-
-The linked list given as input.
-The linked list forms the binary number 0000011111 → (0000011111)[2] = (31)[10]
-
+   <p>
+     ____________________<br> - ̗̀⁽ 再见 !❜
+   </p>
 </div>
