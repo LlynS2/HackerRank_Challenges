@@ -5,7 +5,7 @@
 </div> 
 
 <div align="center" >
-  <img height="180px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/5d898f1c-f018-4129-bc37-c3b209a33276"><br><br>
+  <img height="180px" src="https://github.com/LlynS2/HackerRank_Challenges/assets/86667062/20ddf5b7-dbdf-44c5-a8df-27826f8709cf"><br><br>
 </div><br>
 
 <div align="left">
